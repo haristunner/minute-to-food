@@ -1,19 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 import logo from "../../assets/logo.png";
 import biriyani from "../../assets/biriyani.jpg";
+// import { Register } from "../Register/Register";
+import Button from "@mui/material/Button";
+import GoogleIcon from "@mui/icons-material/Google";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { auth } from "../../firebase";
 
 export const Header = () => {
+  const signIn = (e) => {
+    e.preventDefault();
+
+    const provider = new GoogleAuthProvider();
+
+    signInWithPopup(auth, provider)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  };
+
   return (
     <div className="header">
       <header>
         <div className="header__head">
           <img src={logo} alt="" />
           <div className="header__btn">
-            <button className="header__login">Login</button>
-            <button className="header__register">Sign Up</button>
+            <Button
+              variant="contained"
+              endIcon={<GoogleIcon />}
+              style={{ backgroundColor: "#fc8019", borderColor: "#fc8019" }}
+              onClick={signIn}
+            >
+              Sign In With
+            </Button>
           </div>
         </div>
+
         <h1></h1>
         <h4>Order food from your favourite restaurants near you.</h4>
         <div className="header__form">

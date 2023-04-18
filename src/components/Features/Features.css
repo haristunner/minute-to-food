@@ -1,0 +1,30 @@
+.features {
+  background-color: #2b1e16;
+  color: #fff;
+  display: flex;
+  padding: 5vh;
+  gap: 5vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.feature>img{
+    width: 15vw;    
+}
+
+.feature > p {
+  color: #e0cbc1;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+@media screen and (max-width:767px) {
+    .features{
+        flex-direction: column;
+    }
+
+    .feature>img{
+        width: 25vw;
+    }
+}

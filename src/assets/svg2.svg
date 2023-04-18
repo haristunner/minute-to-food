@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1080" height="1080" viewBox="0 0 1080 1080" xml:space="preserve">
+<desc>Created with Fabric.js 5.2.4</desc>
+<defs>
+</defs>
+<g transform="matrix(1 0 0 1 540 540)" id="79d1e698-ee83-46f6-8765-55e1963015d2"  >
+<rect style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1; visibility: hidden;" vector-effect="non-scaling-stroke"  x="-540" y="-540" rx="0" ry="0" width="1080" height="1080" />
+</g>
+<g transform="matrix(1 0 0 1 540 540)" id="937aa08b-82f6-4181-b833-b5ffe39279f1"  >
+</g>
+<g transform="matrix(1.05 0 0 1.05 540 540)"  >
+<g style=""   >
+		<g transform="matrix(1 0 0 1 0 0)" id="SVGRepo_iconCarrier"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,236,179); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  transform=" translate(-512, -512)" d="M 640 213.333333 L 384 128 L 128 213.333333 L 128 896 L 384 810.666667 L 640 896 L 896 810.666667 L 896 128 z" stroke-linecap="round" />
+</g>
+		<g transform="matrix(1 0 0 1 0 0)" id="SVGRepo_iconCarrier"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,224,130); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  transform=" translate(-512, -512)" d="M 384 128 L 384 810.666667 L 640 896 L 640 213.333333 z" stroke-linecap="round" />
+</g>
+		<g transform="matrix(1 0 0 1 128 32)" id="SVGRepo_iconCarrier"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(252,128,22); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  transform=" translate(-640, -544)" d="M 640 320 C 557.504 320 490.66666699999996 390.250667 490.66666699999996 476.821333 C 490.66666699999996 563.3919989999999 640 768 640 768 C 640 768 789.333333 563.370667 789.333333 476.821333 C 789.333333 390.27199899999994 722.496 320 640 320 z" stroke-linecap="round" />
+</g>
+		<g transform="matrix(1 0 0 1 128 -42.67)" id="SVGRepo_iconCarrier"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,235,238); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  transform=" translate(-640, -469.33)" d="M 640 469.333333 M 576 469.333333 C 576 504.67955698917075 604.6537760108292 533.333333 640 533.333333 C 675.3462239891708 533.333333 704 504.67955698917075 704 469.333333 C 704 433.9871090108292 675.3462239891708 405.333333 640 405.333333 C 604.6537760108292 405.333333 576 433.9871090108292 576 469.333333 Z" stroke-linecap="round" />
+</g>
+</g>
+</g>
+</svg>

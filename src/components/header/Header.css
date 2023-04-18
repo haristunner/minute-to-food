@@ -13,41 +13,8 @@ header {
 }
 
 .header__head > img {
-  width: 40vw;
+  width: 35vw;
   cursor: pointer;
-}
-
-.header__btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.header__btn > button {
-  border: none;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 10px 20px;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.header__login {
-  background-color: transparent;
-}
-
-.header__login:hover {
-  color: #fc8019;
-}
-
-.header__register {
-  background-color: #111;
-  color: #e0e0e0;
-}
-
-.header__register:hover {
-  color: #fff;
-  font-weight: 505;
 }
 
 header > h4 {
@@ -74,6 +41,7 @@ header > h4 {
   border: none;
   background-color: #fc8019;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .header__form {
@@ -101,4 +69,36 @@ header > h4 {
   color: #666;
   margin-left: 0.25vw;
   margin-right: 0.25vw;
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    min-height: 65vh;
+  }
+
+  .header__head{
+    margin-bottom: 6vh;
+    margin-top: 2vh;
+  }
+
+  .header__head > img {
+    width: 45vw;
+  }
+
+  .header__form > button {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .header__form > input {
+    padding: 10px;
+  }
+
+  .header__form > input::placeholder {
+    font-size: 13.2px;
+  }
+
+  .header__form {
+    gap: 0.1px;
+  }
 }

@@ -1,0 +1,35 @@
+.credits {
+  background-color: #000;
+  color: white;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  text-align: center;
+}
+
+.credits > button {
+  border: none;
+  background-color: transparent;
+  color: #9c9c9c;
+  font-size: 30px;
+  padding-bottom: 7vh;
+  cursor: pointer;
+}
+
+.credits > button:hover {
+  scale: 1.04;
+  color: #f3f3f3;
+}
+
+.credits__line {
+  height: 2px;
+  width: 80%;
+  margin: auto;
+  background-color: #9c9c9c;
+  opacity: 0.3;
+  margin-bottom: 1vh;
+}
+
+.credits > p {
+  opacity: 0.5;
+  letter-spacing: 0.7px;
+}
