@@ -7,8 +7,11 @@ import Button from "@mui/material/Button";
 import GoogleIcon from "@mui/icons-material/Google";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from "../../firebase";
+import { useNavigate } from "react-router-dom";
 
 export const Header = () => {
+  const navigate = useNavigate();
+
   const signIn = (e) => {
     e.preventDefault();
 
@@ -17,6 +20,7 @@ export const Header = () => {
     signInWithPopup(auth, provider)
       .then((res) => {
         console.log(res);
+        navigate("/home");
       })
       .catch((err) => {
         console.error(err);

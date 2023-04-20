@@ -1,0 +1,31 @@
+.nav {
+  min-height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 1px 1px 10px rgb(152, 151, 151);
+}
+
+.nav > img {
+  height: 10vh;
+  cursor: pointer;
+}
+
+.nav > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+}
+
+.nav > div > p {
+  font-size: large;
+  font-weight: 600;
+}
+
+.nav > div > div {
+  height: 4vh;
+  width: 4vh;
+  background-color: rgb(211, 211, 211);
+  border-radius: 50%;
+}
