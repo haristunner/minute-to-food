@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./Nav.css";
 import logo from "../../assets/logo.svg";
+import { useSelector } from "react-redux";
 
 export const Nav = () => {
   const [show, setShow] = useState(false);
+  const username = useSelector((state) => state.user.username);
+  const profileURL = useSelector((state) => state.user.profile);
 
   const transitionNav = () => {
     if (window.scrollY > 50) {
@@ -11,6 +14,10 @@ export const Nav = () => {
     } else {
       setShow(false);
     }
+  };
+
+  const top = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   useEffect(() => {
@@ -24,10 +31,12 @@ export const Nav = () => {
 
   return (
     <div className={`nav ${show && "nav-show"}`}>
-      <img src={logo} alt="" />
+      <img src={logo} alt="" onClick={top} />
       <div className="nav__account">
-        <p>Welcome</p>
-        <div></div>
+        <p>
+          Welcome <br /> <span>{username}</span>
+        </p>
+        <img src={profileURL} alt="" />
       </div>
     </div>
   );

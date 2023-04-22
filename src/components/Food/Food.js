@@ -18,12 +18,15 @@ import chicken65 from "../../assets/chicken65.webp";
 import fishFry from "../../assets/fishFry.jpeg";
 import dosa from "../../assets/dosai.webp";
 import breadOmelette from "../../assets/breadOmelette.webp";
+import { useSelector } from "react-redux";
 
 export const Food = () => {
+  const location = useSelector((state) => state.user.location);
+
   return (
     <div className="food">
       <header>
-        <h1>Order Your FAVOURITE FooD from {} </h1>
+        <h1>Order Your FAVOURITE FooD from <span>{location}</span> </h1>
       </header>
       <div className="food__container">
         <div className="box">

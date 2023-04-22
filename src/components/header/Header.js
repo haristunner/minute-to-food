@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Header.css";
 import logo from "../../assets/logo.svg";
 import biriyani from "../../assets/biriyani.jpg";
@@ -8,9 +8,19 @@ import GoogleIcon from "@mui/icons-material/Google";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from "../../firebase";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import {
+  set_location,
+  set_profile,
+  set_username,
+} from "../../features/User/userSlice";
 
 export const Header = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const [location, setLocation] = useState("");
+  const [disable, setDisable] = useState(true);
 
   const signIn = (e) => {
     e.preventDefault();
@@ -20,12 +30,34 @@ export const Header = () => {
     signInWithPopup(auth, provider)
       .then((res) => {
         console.log(res);
+        window.localStorage.setItem("user", auth.currentUser.displayName);
+        window.localStorage.setItem("profile", auth.currentUser.photoURL);
+        window.localStorage.setItem("location", location);
+
+        //dispatch the data to userSlice
+        dispatch(set_username(auth.currentUser.displayName));
+        dispatch(set_profile(auth.currentUser.photoURL));
+        dispatch(set_location(location));
         navigate("/home");
       })
       .catch((err) => {
         console.error(err);
       });
   };
+
+  const login = () => {
+    window.localStorage.setItem("location", location);
+    dispatch(set_location(location));
+    navigate("/home");
+  };
+
+  useEffect(() => {
+    if (location === "") {
+      setDisable(true);
+    } else {
+      setDisable(false);
+    }
+  }, [location]);
 
   return (
     <div className="header">
@@ -38,6 +70,7 @@ export const Header = () => {
               endIcon={<GoogleIcon />}
               style={{ backgroundColor: "#fc8019", borderColor: "#fc8019" }}
               onClick={signIn}
+              disabled={disable}
             >
               Sign In With
             </Button>
@@ -50,9 +83,12 @@ export const Header = () => {
           <input
             type="text"
             placeholder="Enter your current location"
+            onChange={(e) => {
+              setLocation(e.target.value);
+            }}
             autoFocus
           />
-          <button>FIND FOOD</button>
+          <button onClick={login}>FIND FOOD</button>
         </div>
         <div className="header__place">
           <h5>POPULAR CITIES IN INDIA</h5>
