@@ -4,7 +4,7 @@ import { Food } from "../../components/Food/Food";
 
 export const Home = () => {
   return (
-    <div>
+    <div style={{ overflow: "hidden" }}>
       <Nav />
       <Food />
     </div>

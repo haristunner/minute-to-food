@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Header.css";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo.svg";
 import biriyani from "../../assets/biriyani.jpg";
 // import { Register } from "../Register/Register";
 import Button from "@mui/material/Button";
@@ -47,7 +47,11 @@ export const Header = () => {
         <h1></h1>
         <h4>Order food from your favourite restaurants near you.</h4>
         <div className="header__form">
-          <input type="text" placeholder="Enter your current location" />
+          <input
+            type="text"
+            placeholder="Enter your current location"
+            autoFocus
+          />
           <button>FIND FOOD</button>
         </div>
         <div className="header__place">

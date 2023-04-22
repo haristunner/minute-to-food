@@ -14,10 +14,21 @@
   border-radius: 5px;
   text-align: center;
   padding: 2vw;
+  transition: transform 450ms;
+  cursor: pointer;
+}
+
+.box:hover {
+  transform: scale(1.08);
+  visibility: inherit;
 }
 
 .box > img {
   width: 20vw;
+}
+
+.food {
+  padding-top: 16vh;
 }
 
 @media screen and (max-width: 767px) {
