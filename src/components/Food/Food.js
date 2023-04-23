@@ -26,7 +26,9 @@ export const Food = () => {
   return (
     <div className="food">
       <header>
-        <h1>Order Your FAVOURITE FooD from <span>{location}</span> </h1>
+        <h1>
+          Order Your FAVOURITE FooD from <span>"{location}" </span>!!
+        </h1>
       </header>
       <div className="food__container">
         <div className="box">

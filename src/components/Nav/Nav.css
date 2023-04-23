@@ -34,7 +34,7 @@
 
 .nav > div > p > span {
   font-weight: 600;
-  color: #fc8019;
+  color: #f7ac6e;
 }
 
 .nav > div > img {
@@ -48,6 +48,15 @@
 
 @media screen and (max-width: 767px) {
   .nav > img {
-    height: 7vh;
+    height: 5vh;
+  }
+
+  .nav > div > p {
+    font-size: 14px;
+  }
+
+  .nav > div > img {
+    height: 4vh;
+    width: 4vh;
   }
 }

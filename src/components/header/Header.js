@@ -45,10 +45,27 @@ export const Header = () => {
       });
   };
 
-  const login = () => {
-    window.localStorage.setItem("location", location);
-    dispatch(set_location(location));
-    navigate("/home");
+  const login = (e) => {
+    e.preventDefault();
+
+    const provider = new GoogleAuthProvider();
+
+    signInWithPopup(auth, provider)
+      .then((res) => {
+        console.log(res);
+        window.localStorage.setItem("user", auth.currentUser.displayName);
+        window.localStorage.setItem("profile", auth.currentUser.photoURL);
+        window.localStorage.setItem("location", location);
+
+        //dispatch the data to userSlice
+        dispatch(set_username(auth.currentUser.displayName));
+        dispatch(set_profile(auth.currentUser.photoURL));
+        dispatch(set_location(location));
+        navigate("/home");
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   };
 
   useEffect(() => {
