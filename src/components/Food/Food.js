@@ -19,6 +19,7 @@ import fishFry from "../../assets/fishFry.jpeg";
 import dosa from "../../assets/dosai.webp";
 import breadOmelette from "../../assets/breadOmelette.webp";
 import { useSelector } from "react-redux";
+import { Box } from "../Box/Box";
 
 export const Food = () => {
   const location = useSelector((state) => state.user.location);
@@ -30,151 +31,117 @@ export const Food = () => {
           Order Your FAVOURITE FooD from <span>"{location}" </span>!!
         </h1>
       </header>
+
       <div className="food__container">
-        <div className="box">
-          <img src={biriyani} alt="" />
-          <h3>RR Biriyani</h3>
-          <p>Chicken Biriyani</p>
-          <h6>
-            INR <span>219</span>
-          </h6>
-        </div>
-        <div className="box">
-          <img src={butterMasala} alt="" />
-          <h3>SS Dhaba</h3>
-          <p>Butter Chicken Masala</p>
-          <h6>
-            INR <span>169</span>
-          </h6>
-        </div>
-        <div className="box">
-          <img src={BBQchicken} alt="" />
-          <h3>Scooter BBQ</h3>
-          <p>BBQ Chicken</p>
-          <h6>
-            INR <span>449</span>
-          </h6>
-        </div>
-        <div className="box">
-          <img src={chickenWings} alt="" />
-          <h3>Hot Chik</h3>
-          <p>Chicken Wings</p>
-          <h6>
-            INR <span>135</span>
-          </h6>
-        </div>
-        <div className="box">
-          <img src={muttonBiriyani} alt="" />
-          <h3>Hazarath Restaurant</h3>
-          <p>Mutton Biriyani</p>
-          <h6>
-            INR <span>320</span>
-          </h6>
-        </div>
-        <div className="box">
-          <img src={kothuParotta} alt="" />
-          <h3>Esakki Parotta's</h3>
-          <p>Kothu parotta</p>
-          <h6>
-            INR <span>140</span>
-          </h6>
-        </div>
-        <div className="box">
-          <img src={grill} alt="" />
-          <h3>BBQ Scooters</h3>
-          <p>Full Grill Chicken</p>
-          <h6>
-            INR <span>499</span>
-          </h6>
-        </div>
-        <div className="box">
-          <img src={chickenNoodles} alt="" />
-          <h3>Fast Foods</h3>
-          <p>Chicken Noodles</p>
-          <h6>
-            INR <span>120</span>
-          </h6>
-        </div>
-        <div className="box">
-          <img src={chickenRice} alt="" />
-          <h3>Fast Foods</h3>
-          <p>Chicken Fried Rice</p>
-          <h6>
-            INR <span>120</span>
-          </h6>
-        </div>
-        <div className="box">
-          <img src={thukpa} alt="" />
-          <h3>Tibetan Kitchen</h3>
-          <p>Chicken Thukpa</p>
-          <h6>
-            INR <span>211</span>
-          </h6>
-        </div>
-        <div className="box">
-          <img src={beefChilli} alt="" />
-          <h3>Muncheez</h3>
-          <p>Beef Chilli</p>
-          <h6>
-            INR <span>281</span>
-          </h6>
-        </div>
-        <div className="box">
-          <img src={chickenRoll} alt="" />
-          <h3>Muncheez</h3>
-          <p>Beef Roll</p>
-          <h6>
-            INR <span>240</span>
-          </h6>
-        </div>
-        <div className="box">
-          <img src={manchowSoup} alt="" />
-          <h3>Anifa Foods</h3>
-          <p>Chicken Manchow Soup</p>
-          <h6>
-            INR <span>219</span>
-          </h6>
-        </div>
-        <div className="box">
-          <img src={mushroom65} alt="" />
-          <h3>Kassibar Food Court</h3>
-          <p>Mushroom 65</p>
-          <h6>
-            INR <span>160</span>
-          </h6>
-        </div>
-        <div className="box">
-          <img src={chicken65} alt="" />
-          <h3>Kassibar Food Court</h3>
-          <p>Chicken 65</p>
-          <h6>
-            INR <span>180</span>
-          </h6>
-        </div>
-        <div className="box">
-          <img src={fishFry} alt="" />
-          <h3>Sea Foods</h3>
-          <p>Fish Fry Full</p>
-          <h6>
-            INR <span>199</span>
-          </h6>
-        </div>
-        <div className="box">
-          <img src={dosa} alt="" />
-          <h3>Saravana Bhavan</h3>
-          <p>Plain Nice Dosa</p>
-          <h6>
-            INR <span>65</span>
-          </h6>
-        </div>
-        <div className="box">
-          <img src={breadOmelette} alt="" />
-          <h3>Crispy Spot</h3>
-          <p>Bread Omelette</p>
-          <h6>
-            INR <span>60</span>
-          </h6>
-        </div>
+        <Box
+          img={biriyani}
+          h3={"RR Biriyani"}
+          p={"Chicken Biriyani"}
+          span={"219"}
+        />
+        <Box
+          img={butterMasala}
+          h3={"SS Dhaba"}
+          p={"Butter Chicken Masala"}
+          span={"169"}
+        />
+
+        <Box
+          img={BBQchicken}
+          h3={"Scooter BBQ"}
+          p={"BBQ Chicken"}
+          span={"449"}
+        />
+
+        <Box
+          img={chickenWings}
+          h3={"Hot Chik"}
+          p={"Chicken Wings"}
+          span={"135"}
+        />
+
+        <Box
+          img={muttonBiriyani}
+          h3={"Hazarath Restaurant"}
+          p={"Mutton Biriyani"}
+          span={"320"}
+        />
+
+        <Box
+          img={kothuParotta}
+          h3={"Esakki Parotta's"}
+          p={"Kothu parotta"}
+          span={"140"}
+        />
+
+        <Box
+          img={grill}
+          h3={"BBQ Scooters"}
+          p={"Full Grill Chicken"}
+          span={"499"}
+        />
+
+        <Box
+          img={chickenNoodles}
+          h3={"Fast Foods"}
+          p={"Chicken Noodles"}
+          span={"120"}
+        />
+
+        <Box
+          img={chickenRice}
+          h3={"Fast Foods"}
+          p={"Chicken Fried Rice"}
+          span={"120"}
+        />
+
+        <Box
+          img={thukpa}
+          h3={"Tibetan Kitchen"}
+          p={"Chicken Thukpa"}
+          span={"211"}
+        />
+
+        <Box img={beefChilli} h3={"Muncheez"} p={"Beef Chilli"} span={"281"} />
+
+        <Box img={chickenRoll} h3={"Muncheez"} p={"Beef Roll"} span={"240"} />
+
+        <Box
+          img={manchowSoup}
+          h3={"Anifa Foods"}
+          p={"Chicken Manchow Soup"}
+          span={"219"}
+        />
+
+        <Box
+          img={mushroom65}
+          h3={"Kassibar Food Court"}
+          p={"Mushroom 65"}
+          span={"160"}
+        />
+
+        <Box
+          img={chicken65}
+          h3={"Kassibar Food Court"}
+          p={"Chicken 65"}
+          span={"180"}
+        />
+
+        <Box img={fishFry} h3={"Sea Foods"} p={"Fish Fry Full"} span={"199"} />
+
+        <Box
+          img={dosa}
+          h3={"Saravana Bhavan"}
+          p={"Plain Nice Dosa"}
+          span={"65"}
+        />
+
+        <Box
+          img={breadOmelette}
+          h3={"Crispy Spot"}
+          p={"Bread Omelette"}
+          span={"60"}
+        />
       </div>
     </div>
   );

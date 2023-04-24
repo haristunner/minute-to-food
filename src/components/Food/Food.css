@@ -1,6 +1,8 @@
 .food > header > h1 {
   color: #000;
   font-size: 40px;
+
+  text-align: center;
 }
 
 .food > header > h1 > span {
@@ -33,6 +35,10 @@
   width: 20vw;
 }
 
+.box>p{
+  margin-bottom: 0.8vh;
+}
+
 .food {
   padding-top: 18vh;
 }
@@ -51,5 +57,7 @@
 
   .food > header > h1 {
     font-size: xx-large;
+    margin-left: 3vw;
+    margin-right: 3vw;
   }
 }
