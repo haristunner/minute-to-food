@@ -20,6 +20,7 @@ import dosa from "../../assets/dosai.webp";
 import breadOmelette from "../../assets/breadOmelette.webp";
 import { useSelector } from "react-redux";
 import { Box } from "../Box/Box";
+import { ShoppingCart } from "@mui/icons-material";
 
 export const Food = () => {
   const location = useSelector((state) => state.user.location);
@@ -31,6 +32,22 @@ export const Food = () => {
           Order Your FAVOURITE FooD from <span>"{location}" </span>!!
         </h1>
       </header>
+
+      <div
+        className="addToCart"
+        style={{
+          textAlign: "center",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap:"5px"
+        }}
+      >
+        <h2>Visit The Cart :</h2>
+        <button >
+          <h5>GO TO CART</h5> <ShoppingCart />
+        </button>
+      </div>
 
       <div className="food__container">
         <Box

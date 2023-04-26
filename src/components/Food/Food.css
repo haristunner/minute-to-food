@@ -1,13 +1,39 @@
 .food > header > h1 {
   color: #000;
   font-size: 40px;
-
   text-align: center;
+  margin-bottom: 2vh;
 }
 
 .food > header > h1 > span {
   color: #383838;
   text-transform: capitalize;
+}
+
+.addToCart > h2 {
+  color: #434343;
+}
+
+.addToCart > button {
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 15px;
+  color: #fc8019;
+  border: 1px solid #fc8019;
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  /* font-weight: bold; */
+  letter-spacing: 0.3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.addToCart > button:hover {
+  box-shadow: 2px 2px 3px #fdb172;
+  transition: all 0.35s;
 }
 
 .food__container {
@@ -35,8 +61,34 @@
   width: 20vw;
 }
 
-.box>p{
+.box > p {
   margin-bottom: 0.8vh;
+}
+
+.box > h6 {
+  margin-bottom: 1.3vh;
+}
+
+.box > button {
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 15px;
+  color: #252525;
+  background-color: #fc8019;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: normal;
+  letter-spacing: 0.3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin: auto;
+}
+
+.box > button:hover {
+  color: #f2f2f2;
+  transition: all 0.35s;
 }
 
 .food {

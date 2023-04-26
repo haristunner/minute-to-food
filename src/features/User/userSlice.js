@@ -4,6 +4,8 @@ const initialState = {
   username: localStorage.getItem("user"),
   profile: localStorage.getItem("profile"),
   location: localStorage.getItem("location"),
+  auth: localStorage.getItem("auth"),
+  cart: [],
   status: "idle",
 };
 
@@ -21,9 +23,21 @@ export const userSlice = createSlice({
     set_location: (state, action) => {
       state.location = action.payload;
     },
+    auth_state: (state, action) => {
+      state.auth = action.payload;
+    },
+    add_to_cart: (state, action) => {
+      state.cart = action.payload;
+    },
   },
 });
 
-export const { set_username, set_profile, set_location } = userSlice.actions;
+export const {
+  set_username,
+  set_profile,
+  set_location,
+  auth_state,
+  add_to_cart,
+} = userSlice.actions;
 
 export default userSlice.reducer;

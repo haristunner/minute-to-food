@@ -10,6 +10,7 @@ import { auth } from "../../firebase";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import {
+  auth_state,
   set_location,
   set_profile,
   set_username,
@@ -33,11 +34,13 @@ export const Header = () => {
         window.localStorage.setItem("user", auth.currentUser.displayName);
         window.localStorage.setItem("profile", auth.currentUser.photoURL);
         window.localStorage.setItem("location", location);
+        window.localStorage.setItem("auth", true);
 
         //dispatch the data to userSlice
         dispatch(set_username(auth.currentUser.displayName));
         dispatch(set_profile(auth.currentUser.photoURL));
         dispatch(set_location(location));
+        dispatch(auth_state(true));
         navigate("/home");
       })
       .catch((err) => {
@@ -56,11 +59,13 @@ export const Header = () => {
         window.localStorage.setItem("user", auth.currentUser.displayName);
         window.localStorage.setItem("profile", auth.currentUser.photoURL);
         window.localStorage.setItem("location", location);
+        window.localStorage.setItem("auth", true);
 
         //dispatch the data to userSlice
         dispatch(set_username(auth.currentUser.displayName));
         dispatch(set_profile(auth.currentUser.photoURL));
         dispatch(set_location(location));
+        dispatch(auth_state(true));
         navigate("/home");
       })
       .catch((err) => {
