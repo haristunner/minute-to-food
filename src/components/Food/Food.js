@@ -21,9 +21,12 @@ import breadOmelette from "../../assets/breadOmelette.webp";
 import { useSelector } from "react-redux";
 import { Box } from "../Box/Box";
 import { ShoppingCart } from "@mui/icons-material";
+import LunchDiningIcon from "@mui/icons-material/LunchDining";
+import { useNavigate } from "react-router-dom";
 
 export const Food = () => {
   const location = useSelector((state) => state.user.location);
+  const navigate = useNavigate();
 
   return (
     <div className="food">
@@ -40,12 +43,12 @@ export const Food = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          gap:"5px"
+          gap: "5px",
         }}
       >
         <h2>Visit The Cart :</h2>
-        <button >
-          <h5>GO TO CART</h5> <ShoppingCart />
+        <button onClick={() => navigate("/cart")}>
+          <h5>GO TO ORDER</h5> <ShoppingCart />
         </button>
       </div>
 

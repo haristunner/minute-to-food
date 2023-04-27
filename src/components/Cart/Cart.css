@@ -1,0 +1,23 @@
+.cart__container {
+  margin-left: 15vw;
+  margin-right: 15vw;
+  box-shadow: 1px 1px 3px black;
+  border-radius: 5px;
+}
+
+.cart__container > li {
+  list-style-type: none;
+  width: 70vw;
+  text-align: center;
+  padding: 3vh 6vw;
+}
+
+.cart__list {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.cart__list > img {
+  width: 30vw;
+}

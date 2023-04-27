@@ -27,7 +27,7 @@ export const userSlice = createSlice({
       state.auth = action.payload;
     },
     add_to_cart: (state, action) => {
-      state.cart = action.payload;
+      state.cart.push(action.payload);
     },
   },
 });

@@ -4,6 +4,7 @@ import { LandingPage } from "./pages/LandingPage/LandingPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./pages/Home/Home";
 import { useSelector } from "react-redux";
+import { Cart } from "./components/Cart/Cart";
 
 function App() {
   const auth = useSelector((state) => state.user.auth);
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<LandingPage />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </Router>
     </div>

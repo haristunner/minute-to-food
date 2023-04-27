@@ -1,8 +1,7 @@
 import React from "react";
-import Button from "@mui/material/Button";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useDispatch } from "react-redux";
 import { add_to_cart } from "../../features/User/userSlice";
+import LunchDiningIcon from "@mui/icons-material/LunchDining";
 
 //Box css is in Food.css
 
@@ -11,6 +10,7 @@ export const Box = (props) => {
 
   const [cart, setCart] = [];
   const addToCart = (product) => {
+    // window.localStorage.setItem("cart", product);
     dispatch(add_to_cart(product));
   };
 
@@ -24,7 +24,7 @@ export const Box = (props) => {
         <span> {props.span}</span>
       </h6>
       <button onClick={() => addToCart(props)}>
-        <h6>ADD TO CART</h6> <ShoppingCartIcon />
+        <h6>ADD TO EAT</h6> <LunchDiningIcon />
       </button>
     </div>
   );
