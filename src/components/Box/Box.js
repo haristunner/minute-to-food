@@ -1,18 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { add_to_cart } from "../../features/User/userSlice";
+import { add_to_cart, cart_clicked } from "../../features/User/userSlice";
 import LunchDiningIcon from "@mui/icons-material/LunchDining";
 
 //Box css is in Food.css
 
 export const Box = (props) => {
   const dispatch = useDispatch();
+  const [cartClicked, setCartClicked] = useState(false);
 
-  const [cart, setCart] = [];
   const addToCart = (product) => {
     // window.localStorage.setItem("cart", product);
+    setCartClicked(true);
     dispatch(add_to_cart(product));
   };
+
+  if (cartClicked) {
+    dispatch(cart_clicked(cartClicked));
+  }
 
   return (
     <div className="box">

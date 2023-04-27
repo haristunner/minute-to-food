@@ -6,6 +6,9 @@ const initialState = {
   location: localStorage.getItem("location"),
   auth: localStorage.getItem("auth"),
   cart: [],
+  cartClicked: false,
+  counter: 1,
+  cost: "",
   status: "idle",
 };
 
@@ -17,17 +20,33 @@ export const userSlice = createSlice({
     set_username: (state, action) => {
       state.username = action.payload;
     },
+
     set_profile: (state, action) => {
       state.profile = action.payload;
     },
+
     set_location: (state, action) => {
       state.location = action.payload;
     },
+
     auth_state: (state, action) => {
       state.auth = action.payload;
     },
+
     add_to_cart: (state, action) => {
       state.cart.push(action.payload);
+    },
+
+    cart_clicked: (state, action) => {
+      state.cartClicked = action.payload;
+    },
+
+    counter_reducer: (state, action) => {
+      state.counter = action.payload;
+    },
+
+    set_cost: (state, action) => {
+      state.cost = action.payload;
     },
   },
 });
@@ -38,6 +57,9 @@ export const {
   set_location,
   auth_state,
   add_to_cart,
+  cart_clicked,
+  counter_reducer,
+  set_cost,
 } = userSlice.actions;
 
 export default userSlice.reducer;
