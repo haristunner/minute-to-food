@@ -10,9 +10,9 @@ export const Box = (props) => {
   const [cartClicked, setCartClicked] = useState(false);
 
   const addToCart = (product) => {
-    // window.localStorage.setItem("cart", product);
     setCartClicked(true);
     dispatch(add_to_cart(product));
+    // window.localStorage.setItem("cart", product);
   };
 
   if (cartClicked) {

@@ -7,8 +7,9 @@ const initialState = {
   auth: localStorage.getItem("auth"),
   cart: [],
   cartClicked: false,
-  counter: 1,
+  counter: window.localStorage.getItem("counter"),
   cost: "",
+  totalCost: [],
   status: "idle",
 };
 
@@ -48,6 +49,10 @@ export const userSlice = createSlice({
     set_cost: (state, action) => {
       state.cost = action.payload;
     },
+
+    set_total: (state, action) => {
+      state.totalCost = action.payload;
+    },
   },
 });
 
@@ -60,6 +65,7 @@ export const {
   cart_clicked,
   counter_reducer,
   set_cost,
+  set_total,
 } = userSlice.actions;
 
 export default userSlice.reducer;

@@ -1,23 +1,77 @@
 .cart__container {
-  margin-left: 15vw;
-  margin-right: 15vw;
-  box-shadow: 1px 1px 3px black;
-  border-radius: 5px;
+  margin-left: 30vw;
+  margin-right: 30vw;
+  box-shadow: 5px 5px 15px black;
+  border-radius: 7px;
+  padding-bottom: 3vh;
 }
 
 .cart__container > li {
   list-style-type: none;
-  width: 70vw;
   text-align: center;
-  padding: 3vh 6vw;
+}
+
+.cart__container > button {
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 15px;
+  color: #252525;
+  background-color: #fc8019;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: normal;
+  letter-spacing: 0.3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin: auto;
+}
+
+.cart__container > button:hover {
+  color: #f2f2f2;
+  transition: all 0.35s;
 }
 
 .cart__list {
   display: flex;
   align-items: center;
-  /* justify-content: center; */
 }
 
 .cart__list > img {
-  width: 30vw;
+  width: 10vw;
+  padding: 3vh 0 3vh 6vw;
+}
+
+.cart__food {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cart__food > p {
+  margin-bottom: 0.8vh;
+  font-size: 20px;
+  font-weight: 550;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cart__list > img {
+    width: 23vw;
+  }
+
+  .cart__container {
+    margin-left: 20vw;
+    margin-right: 20vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cart__container {
+    margin-left: 15vw;
+    margin-right: 15vw;
+  }
+
+  .cart__list > img {
+    width: 30vw;
+  }
 }

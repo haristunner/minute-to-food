@@ -2,20 +2,18 @@ import React, { useState } from "react";
 import RemoveIcon from "@mui/icons-material/Remove";
 import AddIcon from "@mui/icons-material/Add";
 import { useDispatch, useSelector } from "react-redux";
-import { counter_reducer } from "../../features/User/userSlice";
+import { counter_reducer, set_total } from "../../features/User/userSlice";
 
 export const Counter = (props) => {
   const [counter, setCounter] = useState(1);
   const dispatch = useDispatch();
 
-  if (counter !== 0) {
-    dispatch(counter_reducer(counter));
-  }
+  const cost = props.cost * counter;
 
   return (
     <div className="counter">
-      <h6>
-        INR <span>{props.cost * counter}</span>
+      <h6 style={{ marginBottom: "1vh", fontSize: "18px" }}>
+        INR <span>{cost}</span>
       </h6>
       <div
         className="counter__container"
@@ -23,7 +21,7 @@ export const Counter = (props) => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          gap: "5px",
+          gap: "7px",
         }}
       >
         <button
@@ -32,18 +30,36 @@ export const Counter = (props) => {
               setCounter(counter - 1);
             } else return;
           }}
+          style={{
+            border: "none",
+            background: "transparent",
+            cursor: "pointer",
+          }}
         >
-          <RemoveIcon />
+          <RemoveIcon style={{ fontSize: "18px", color: "#e50914" }} />
         </button>
 
-        <p>{counter}</p>
+        <p
+          style={{
+            fontSize: "18px",
+            marginBottom: "3px",
+            padding: "0 5px",
+          }}
+        >
+          {counter}
+        </p>
 
         <button
           onClick={() => {
             setCounter(counter + 1);
           }}
+          style={{
+            border: "none",
+            background: "transparent",
+            cursor: "pointer",
+          }}
         >
-          <AddIcon />
+          <AddIcon style={{ fontSize: "18px", color: "#0f8a65" }} />
         </button>
       </div>
     </div>
