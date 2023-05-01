@@ -5,7 +5,9 @@ const initialState = {
   profile: localStorage.getItem("profile"),
   location: localStorage.getItem("location"),
   auth: localStorage.getItem("auth"),
-  cart: [],
+  cart: localStorage.getItem("cartItems")
+    ? JSON.parse(localStorage.getItem("cartItems"))
+    : [],
   cartClicked: false,
   counter: window.localStorage.getItem("counter"),
   cost: "",
@@ -35,7 +37,21 @@ export const userSlice = createSlice({
     },
 
     add_to_cart: (state, action) => {
-      state.cart.push(action.payload);
+      // Find the existing ones if its there:
+      const existing = state.cart.findIndex(
+        (item) => item.p === action.payload.p
+      );
+      console.log("exist ", existing);
+
+      // If newly add means existing will be -1
+      // else it already have means existing will be the index in that array
+      if (existing < 0) {
+        let productTemp = { ...action.payload };
+        state.cart.push(productTemp);
+      }
+      localStorage.setItem("cartItems", JSON.stringify(state.cart));
+
+      // state.cart.push(action.payload);
     },
 
     cart_clicked: (state, action) => {

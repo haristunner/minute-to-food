@@ -43,7 +43,7 @@
   margin: 5vw;
 }
 
-.box {
+.box > div {
   box-shadow: 1px 1px 5px rgb(152, 151, 151);
   border-radius: 5px;
   text-align: center;
@@ -52,24 +52,24 @@
   cursor: pointer;
 }
 
-.box:hover {
+.box > div:hover {
   transform: scale(1.08);
   visibility: inherit;
 }
 
-.box > img {
+.box > div > img {
   width: 20vw;
 }
 
-.box > p {
+.box > div > p {
   margin-bottom: 0.8vh;
 }
 
-.box > h6 {
+.box > div > h6 {
   margin-bottom: 1.3vh;
 }
 
-.box > button {
+.box > div > button {
   border: none;
   padding: 0.5rem 1rem;
   font-size: 15px;
@@ -86,13 +86,40 @@
   margin: auto;
 }
 
-.box > button:hover {
+.box > div > button:hover {
   color: #f2f2f2;
   transition: all 0.35s;
 }
 
 .food {
   padding-top: 18vh;
+}
+
+.popUp {
+  /* width: 90vw; */
+  position: fixed;
+  bottom: 3vh;
+  left: 35vw;
+  right: 35vw;
+  background: #fdb172;
+  text-align: center;
+  color: #000;
+  font-size: large;
+  font-weight: 550;
+  z-index: 1;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .popUp {
+    left: 25vw;
+    right: 25vw;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -111,5 +138,10 @@
     font-size: xx-large;
     margin-left: 3vw;
     margin-right: 3vw;
+  }
+
+  .popUp {
+    left: 12vw;
+    right: 12vw;
   }
 }
