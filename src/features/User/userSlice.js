@@ -45,13 +45,13 @@ export const userSlice = createSlice({
 
       // If newly add means existing will be -1
       // else it already have means existing will be the index in that array
+      // so if it returns -1 ,then only we pushing to the cart
+      // then newly coming product only get added
       if (existing < 0) {
         let productTemp = { ...action.payload };
         state.cart.push(productTemp);
       }
       localStorage.setItem("cartItems", JSON.stringify(state.cart));
-
-      // state.cart.push(action.payload);
     },
 
     cart_clicked: (state, action) => {

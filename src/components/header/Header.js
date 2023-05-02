@@ -51,6 +51,11 @@ export const Header = () => {
   const login = (e) => {
     e.preventDefault();
 
+    if (!location) {
+      alert("Please enter your location");
+      return;
+    }
+
     const provider = new GoogleAuthProvider();
 
     signInWithPopup(auth, provider)

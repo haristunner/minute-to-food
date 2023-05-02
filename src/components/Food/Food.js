@@ -21,7 +21,6 @@ import breadOmelette from "../../assets/breadOmelette.webp";
 import { useSelector } from "react-redux";
 import { Box } from "../Box/Box";
 import { ShoppingCart } from "@mui/icons-material";
-import LunchDiningIcon from "@mui/icons-material/LunchDining";
 import { useNavigate } from "react-router-dom";
 
 export const Food = () => {

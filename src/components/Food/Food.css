@@ -96,12 +96,12 @@
 }
 
 .popUp {
-  /* width: 90vw; */
   position: fixed;
   bottom: 3vh;
   left: 35vw;
   right: 35vw;
-  background: #fdb172;
+  background-color: #fdb172;
+  box-shadow: 2px 2px 5px #fc8019;
   text-align: center;
   color: #000;
   font-size: large;

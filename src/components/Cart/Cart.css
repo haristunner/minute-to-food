@@ -1,7 +1,7 @@
 .cart__container {
   margin-left: 30vw;
   margin-right: 30vw;
-  box-shadow: 5px 5px 15px black;
+  box-shadow: 1px 1px 5px rgb(152, 151, 151);
   border-radius: 7px;
   padding-bottom: 3vh;
 }
