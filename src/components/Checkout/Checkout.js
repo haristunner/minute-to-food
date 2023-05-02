@@ -10,10 +10,12 @@ export const Checkout = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    setTimeout(() => {
-      setPopUp(false);
-      navigate("/home");
-    }, [4000]);
+    if (popUp) {
+      setTimeout(() => {
+        setPopUp(false);
+        navigate("/home");
+      }, [4000]);
+    }
   }, [popUp]);
 
   return (
