@@ -6,21 +6,15 @@ import { useNavigate } from "react-router-dom";
 
 export const Checkout = () => {
   const [popUp, setPopUp] = useState(false);
-  const [goTo, setGoTo] = useState(false);
 
   const navigate = useNavigate();
 
   useEffect(() => {
     setTimeout(() => {
       setPopUp(false);
-      setGoTo(!goTo);
+      navigate("/home");
     }, [4000]);
   }, [popUp]);
-
-  if (goTo) {
-    localStorage.removeItem("cartItems");
-    navigate("/home");
-  }
 
   return (
     <div className="checkout">
